@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>wrk_session_list_dialog</class>
+ <widget class="QDialog" name="wrk_session_list_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>645</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>URMHS - Work session list</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>270</y>
+     <width>261</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>361</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Work session list (the yellow row refers to the current work session):</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="wrk_session_list">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>621</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Filter by:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="FilterBy">
+   <property name="geometry">
+    <rect>
+     <x>78</x>
+     <y>270</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Details">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Details...</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>wrk_session_list_dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>wrk_session_list_dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>406</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>helpRequested()</signal>
+   <receiver>wrk_session_list_dialog</receiver>
+   <slot>onHelpButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>603</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>FilterBy</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>wrk_session_list_dialog</receiver>
+   <slot>onFilterChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Details</sender>
+   <signal>clicked()</signal>
+   <receiver>wrk_session_list_dialog</receiver>
+   <slot>onDetailsButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onHelpButton()</slot>
+  <slot>onFilterChanged()</slot>
+  <slot>onDetailsButton()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/plugins/urmhs">
+        <file>icons/wrk_session_create.png</file>
+        <file>icons/wrk_session_del.png</file>
+        <file>icons/wrk_session_activate.png</file>
+        <file>icons/wrk_session_save.png</file>
+        <file>icons/wrk_session_suspend.png</file>
+        <file>icons/wrk_session_list.png</file>
+        <file>icons/wrk_session_chage_executer.png</file>
+        <file>icons/enable_stack.png</file>
+        <file>icons/disable_stack.png</file>
+        <file>icons/help.png</file>
+        <file>icons/undo.png</file>
+        <file>icons/n_undo.png</file>
+        <file>icons/redo.png</file>
+        <file>icons/n_redo.png</file>
+        <file>icons/undo_begin_group.png</file>
+        <file>icons/undo_end_group.png</file>
+        <file>icons/undo_insert_bookmark.png</file>
+        <file>icons/undo_bookmark.png</file>
+        <file>icons/redo_bookmark.png</file>        
+        <file>icons/enable_history.png</file>
+        <file>icons/disable_history.png</file>
+        <file>icons/set_history_date.png</file>
+        <file>icons/user_confirm.png</file>
+        <file>icons/user_management.png</file>
+        <file>icons/set_current_dbconnection.png</file>
+    </qresource>    
+</RCC>

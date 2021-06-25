@@ -1,0 +1,41 @@
+# This file contains metadata for your plugin. Beginning
+# with version 1.8 this is the preferred way to supply information about a
+# plugin. The current method of embedding metadata in __init__.py will
+# be supported until version 2.0
+
+# This file should be included when you package your plugin.
+
+# Mandatory items:
+
+[general]
+name=urmhs
+qgisMinimumVersion=3.0
+description=Undo Redo Multiuser History System
+about=Undo Redo Multiuser History System
+version=3.0
+author=Roberto Poltini
+email=roberto.poltini@gmail.com
+tracker=https://github.com/rpoltini/URMHS/issues
+repository=https://github.com/rpoltini/URMHS
+
+# end of mandatory metadata
+
+# Optional items:
+
+category=Vector
+
+# tags are comma separated with spaces allowed
+tags=vector
+
+homepage=https://github.com/rpoltini/URMHS
+icon=icons/urmhs.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version
+deprecated=False
+
+qgisMaximumVersion=3.99
+
+# Uncomment the following line and add your changelog entries:
+changelog=

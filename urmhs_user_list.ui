@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>user_list_dialog</class>
+ <widget class="QDialog" name="user_list_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>299</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>URMHS - User list</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>361</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>User list (the yellow row refers to the current user):</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="user_list">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>541</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>270</y>
+     <width>261</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Close|QDialogButtonBox::Help</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>30</y>
+     <width>71</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>60</y>
+     <width>71</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delButton">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>90</y>
+     <width>71</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>addButton</sender>
+   <signal>clicked()</signal>
+   <receiver>user_list_dialog</receiver>
+   <slot>onAdd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>624</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updButton</sender>
+   <signal>clicked()</signal>
+   <receiver>user_list_dialog</receiver>
+   <slot>onUpd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>636</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delButton</sender>
+   <signal>clicked()</signal>
+   <receiver>user_list_dialog</receiver>
+   <slot>onDel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>611</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>clicked(QAbstractButton*)</signal>
+   <receiver>user_list_dialog</receiver>
+   <slot>onButtonBox()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>401</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onAdd()</slot>
+  <slot>onUpd()</slot>
+  <slot>onDel()</slot>
+  <slot>onHelpButton()</slot>
+  <slot>onClose()</slot>
+  <slot>onButtonBox()</slot>
+ </slots>
+</ui>
